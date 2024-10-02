@@ -3,8 +3,8 @@
   "displayName": "Console Log Remover",
   "description": "Remove console.log statements from your code",
   "version": "0.0.1",
-  "icon": "images/icon.svg",
-  "engines": { 
+  "icon": "images/icon.png",
+  "engines": {
     "vscode": "^1.60.0"
   },
   "categories": [
