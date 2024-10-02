@@ -1,15 +1,11 @@
 import * as vscode from 'vscode';
 
 export function commentConsoleLogs(text: string): string {
-    // Regular expression to match console.log statements
-    const consoleLogRegex = /(console\.log\(.*?\);?)/g;
+    // Regular expression to match console.log statements that are not already commented
+    const consoleLogRegex = /(?<!\/\/\s*)\bconsole\.log\(.*?\);?/g;
 
     // Replace console.log statements with commented versions
     return text.replace(consoleLogRegex, (match) => {
-        // Check if the line is already commented
-        if (match.trim().startsWith('//')) {
-            return match; // Leave already commented lines as they are
-        }
         return `// ${match}`; // Comment out the console.log statement
     });
 }
@@ -31,9 +27,9 @@ export function registerCommentConsoleLogsCommand(context: vscode.ExtensionConte
                     commentedText
                 );
                 await vscode.workspace.applyEdit(edit);
-                vscode.window.showInformationMessage('Console.log statements have been commented out.✨✅');
+                vscode.window.showInformationMessage('Console.log statements have been commented out✨✅');
             } else {
-                vscode.window.showInformationMessage('No console.log statements found to comment.');
+                vscode.window.showInformationMessage('No console.log statements found to comment ❗');
             }
         }
     });
