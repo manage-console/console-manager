@@ -1,8 +1,8 @@
 {
   "name": "console-log-remover",
   "displayName": "Console Log Remover",
-  "description": "Remove console.log statements from your code",
-  "version": "0.0.1",
+  "description": "Remove, comment, or selectively remove different types of console statements",
+  "version": "0.0.2",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.60.0"
@@ -12,38 +12,82 @@
   ],
   "activationEvents": [
     "onCommand:extension.removeConsoleLogsAll",
-    "onCommand:extension.removeConsoleLogsCurrent"
+    "onCommand:extension.removeConsoleLogsCurrent",
+    "onCommand:extension.commentConsoleLogsAll",
+    "onCommand:extension.commentConsoleLogsCurrent",
+    "onCommand:extension.removeAllConsoleTypesAll",
+    "onCommand:extension.removeAllConsoleTypesCurrent"
   ],
   "main": "./out/extension.js",
   "contributes": {
-  "commands": [
-  {
-    "command": "extension.removeConsoleLogsAll",
-    "title": "Remove console.log from All Project Files"
-  },
-  {
-    "command": "extension.removeConsoleLogsCurrent",
-    "title": "Remove console.log from Current File"
-  }
-]
-,
+    "commands": [
+      {
+        "command": "extension.removeConsoleLogsAll",
+        "title": "Remove console.log from All Project Files"
+      },
+      {
+        "command": "extension.removeConsoleLogsCurrent",
+        "title": "Remove console.log from Current File"
+      },
+      {
+        "command": "extension.commentConsoleLogsAll",
+        "title": "Comment console.log in All Project Files"
+      },
+      {
+        "command": "extension.commentConsoleLogsCurrent",
+        "title": "Comment console.log in Current File"
+      },
+      {
+        "command": "extension.removeAllConsoleTypesAll",
+        "title": "Remove Selected Console Types from All Project Files"
+      },
+      {
+        "command": "extension.removeAllConsoleTypesCurrent",
+        "title": "Remove Selected Console Types from Current File"
+      }
+    ],
     "configuration": {
-      "title": "Console Log Remover",
+      "title": "Console Remover",
       "properties": {
         "consoleLogRemover.includedExtensions": {
           "type": "array",
           "default": [".js", ".ts", ".jsx", ".tsx"],
-          "description": "File extensions to include for console.log removal"
+          "description": "File extensions to include for console operations"
         },
         "consoleLogRemover.excludedFolders": {
           "type": "array",
           "default": ["node_modules", "dist", "build", ".git"],
-          "description": "Folders to exclude from console.log removal"
+          "description": "Folders to exclude from console operations"
         },
         "consoleLogRemover.excludedFiles": {
           "type": "array",
           "default": ["config.js", "config.json", "package.json", "package-lock.json"],
-          "description": "Files to exclude from console.log removal"
+          "description": "Files to exclude from console operations"
+        },
+        "consoleRemover.removeLog": {
+          "type": "boolean",
+          "default": true,
+          "description": "Remove console.log statements"
+        },
+        "consoleRemover.removeError": {
+          "type": "boolean",
+          "default": false,
+          "description": "Remove console.error statements"
+        },
+        "consoleRemover.removeWarn": {
+          "type": "boolean",
+          "default": false,
+          "description": "Remove console.warn statements"
+        },
+        "consoleRemover.removeInfo": {
+          "type": "boolean",
+          "default": false,
+          "description": "Remove console.info statements"
+        },
+        "consoleRemover.removeDebug": {
+          "type": "boolean",
+          "default": false,
+          "description": "Remove console.debug statements"
         }
       }
     }
