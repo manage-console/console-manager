@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" className="w-48 h-48">
+      {/* Background square */}
+    <rect width="200" height="200" fill="#2D3748" rx="20" />
+
+      {/* Console window */}
+    <rect x="20" y="40" width="160" height="120" rx="10" fill="#1A202C" />
+
+      {/* Window controls */}
+    <circle cx="40" cy="60" r="5" fill="#FC8181" />
+    <circle cx="60" cy="60" r="5" fill="#F6E05E" />
+    <circle cx="80" cy="60" r="5" fill="#68D391" />
+
+      {/* Console prompt */}
+    <text x="35" y="110" fill="#A0AEC0" fontSize="28" fontFamily="monospace" fontWeight="bold">
+        &gt;
+    </text>
+
+      {/* Console text */}
+    <text x="60" y="110" fill="#F6AD55" fontSize="28" fontFamily="monospace" fontWeight="bold">
+        console
+    </text>
+
+      {/* Prohibition circle */}
+    <circle cx="160" cy="40" r="35" fill="#FC8181" />
+
+      {/* X mark */}
+    <path d="M145 25 L175 55 M175 25 L145 55" stroke="white" strokeWidth="8" strokeLinecap="round" />
+</svg>
