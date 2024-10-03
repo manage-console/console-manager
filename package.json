@@ -7,14 +7,13 @@
     "publisher": "ConsoleManager",
     "author": "Mohamed Nabih",
     "license": "SEE LICENSE IN LICENSE",
-      "repository": {
+    "repository": {
         "type": "git",
         "url": "https://github.com/muhammad-nabih/console-manager"
     },
-"engines": {
-    "vscode": "^1.93.0"
-}
-,
+    "engines": {
+        "vscode": "^1.93.0"
+    },
     "categories": [
         "Other"
     ],
@@ -95,13 +94,13 @@
     },
     "devDependencies": {
         "@types/vscode": "^1.93.0",
-        "@types/mocha": "^10.0.8",
-        "@types/node": "20.x",
-        "@typescript-eslint/eslint-plugin": "^8.7.0",
-        "@typescript-eslint/parser": "^8.7.0",
-        "eslint": "^9.11.1",
-        "typescript": "^5.6.2",
-        "@vscode/test-cli": "^0.0.10",
-        "@vscode/test-electron": "^2.4.1"
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.11.24",
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "@typescript-eslint/parser": "^7.1.0",
+        "eslint": "^8.57.0",
+        "typescript": "^5.3.3",
+        "@vscode/test-cli": "^0.0.4",
+        "@vscode/test-electron": "^2.3.9"
     }
 }
