@@ -1,8 +1,8 @@
-# Console Log Remover 🧹✨
+# Console Manager 🧹✨
 
 ## Overview
 
-Console Log Remover is a powerful Visual Studio Code extension designed to streamline your JavaScript and TypeScript development process. It offers efficient tools for managing `console.log` statements and other console methods in your code, helping you clean up your projects quickly and effectively.
+Console Manager is a powerful Visual Studio Code extension designed to streamline your JavaScript and TypeScript development process. It offers efficient tools for managing `console.log` statements and other console methods in your code, helping you clean up your projects quickly and effectively.
 
 ## Features 🚀
 
@@ -15,7 +15,7 @@ Console Log Remover is a powerful Visual Studio Code extension designed to strea
 
 1. Open Visual Studio Code
 2. Go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X on Mac)
-3. Search for "Console Log Remover"
+3. Search for "Console Manager"
 4. Click Install
 
 ## Usage 🛠️
@@ -31,7 +31,7 @@ Access these commands through the Command Palette (Ctrl+Shift+P or Cmd+Shift+P o
 
 ### Examples
 
-#### Before using Console Log Remover
+#### Before using Console Manager
 
 ```javascript
 function calculateTotal(items) {
@@ -75,7 +75,7 @@ function calculateTotal(items) {
 
 ## Working with Multiple Files 📁
 
-Console Log Remover excels at processing multiple files simultaneously, making it perfect for cleaning up entire projects quickly. Here's how it works:
+Console Manager excels at processing multiple files simultaneously, making it perfect for cleaning up entire projects quickly. Here's how it works:
 
 ### Example Project Structure
 
@@ -92,7 +92,7 @@ my-project/
 └── config.js
 ```
 
-### Before Using Console Log Remover
+### Before Using Console Manager
 
 **src/main.js**
 
@@ -190,7 +190,7 @@ Note: `config.js` remains unchanged as it's in the `excludedFiles` list by defau
 - After bulk processing, review changes in your version control system to ensure desired results.
 - For large projects, consider running the command on specific folders or file types first to gauge its impact.
 
-By leveraging Console Log Remover's ability to process multiple files, you can maintain clean, production-ready code across your entire project with minimal effort.
+By leveraging Console Manager's ability to process multiple files, you can maintain clean, production-ready code across your entire project with minimal effort.
 
 ## Configuration ⚙️
 
@@ -208,7 +208,7 @@ Customize the extension's behavior through VS Code settings:
 - `excludedFolders`: Folders to ignore
 - `excludedFiles`: Specific files to ignore
 
-## Why Use Console Log Remover? 🤔
+## Why Use Console Manager? 🤔
 
 - 🎯 **Targeted Cleaning**: Choose between cleaning a single file or the entire project
 - ⚡ **Fast and Efficient**: Quickly remove or comment out debugging statements before deployment
@@ -225,8 +225,9 @@ This extension is licensed under the MIT License.
 
 ## Support 💬
 
-If you encounter any issues or have suggestions, please [open an issue](https://github.com/muhammad-nabih/remove-console-log/issues) on our GitHub repository.
+If you encounter any issues or have suggestions, please [open an issue](https://github.com/muhammad-nabih/console-manager/issues) on our GitHub repository.
 
 ---
 
 Happy coding! 🚀✨
+```
