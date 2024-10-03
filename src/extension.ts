@@ -83,9 +83,9 @@ async function processCurrentFile(processor: (text: string) => string) {
         );
         edit.replace(document.uri, fullRange, updatedText);
         await vscode.workspace.applyEdit(edit);
-        vscode.window.showInformationMessage('Operation completed successfully.✨✅');
+        vscode.window.showInformationMessage('Operation Completed Successfully✨✅');
     } else {
-        vscode.window.showInformationMessage('No changes were necessary.');
+        vscode.window.showInformationMessage('No Changes Were Necessary.');
     }
 }
 
@@ -100,7 +100,7 @@ async function processAllFiles(processor: (text: string) => string) {
     const settings = getSettings();
     const filesProcessed = await processFiles(rootPath, settings, processor);
 
-    vscode.window.showInformationMessage(`Processed ${filesProcessed} files successfully.✨✅`);
+    vscode.window.showInformationMessage(`Processed [ ${filesProcessed} ] Files Successfully✨✅`);
 }
 
 async function processFiles(

@@ -1,10 +1,11 @@
 {
-    "name": "console-log-remover",
-    "displayName": "Console Log Remover",
-    "description": "Remove, comment, or selectively remove different types of console statements",
+    "name": "console-manager",
+    "displayName": "Console Manager 🧹✨",
+    "description": "Remove console.log statements from current file or whole project, comment all console.log statements in current file or whole project with a single command.",
     "version": "0.0.2",
     "icon": "images/icon.png",
     "publisher": "Mohamed Nabih",
+    "author": "Mohamed Nabih",
     "engines": {
         "vscode": "^1.60.0"
     },
