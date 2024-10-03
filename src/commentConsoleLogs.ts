@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 export function commentConsoleLogs(text: string): string {
     // Regular expression to match console.log statements that are not already commented
     const consoleLogRegex = /(?<!\/\/\s*)\bconsole\.log\(.*?\);?/g;
-
+            
     // Replace console.log statements with commented versions
     return text.replace(consoleLogRegex, (match) => {
         return `// ${match}`; // Comment out the console.log statement
