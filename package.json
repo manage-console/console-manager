@@ -1,98 +1,109 @@
 {
-    "name": "console-manager",
-    "displayName": "Console Manager 🧹✨",
-    "description": "Remove console.log statements from current file or whole project, comment all console.log statements in current file or whole project with a single command.",
-  "version": "1.0.0",
-    "icon": "images/icon.png",
-    "publisher": "Mohamed Nabih",
-    "author": "Mohamed Nabih",
-    "engines": {
-        "vscode": "^1.60.0"
-    },
-    "categories": [
-        "Other"
+  "name": "clg-manger",
+  "displayName": "Console Manager 🧹✨",
+  "description": "Remove console.log statements from current file or whole project, comment all console.log statements in current file or whole project with a single command.",
+  "version": "1.0.1",
+  "icon": "images/icon.png",
+  "publisher": "ConsoleManager",
+  "author": "Mohamed Nabih",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammad-nabih/console-manager"
+  },
+  "engines": {
+    "vscode": "^1.93.0",
+    "node": ">=18.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.removeConsoleLogsAll",
+    "onCommand:extension.removeConsoleLogsCurrent",
+    "onCommand:extension.commentConsoleLogsAll",
+    "onCommand:extension.commentConsoleLogsCurrent"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.removeConsoleLogsAll",
+        "title": "Remove console.log from All Project Files"
+      },
+      {
+        "command": "extension.removeConsoleLogsCurrent",
+        "title": "Remove console.log from Current File"
+      },
+      {
+        "command": "extension.commentConsoleLogsAll",
+        "title": "Comment console.log in All Project Files"
+      },
+      {
+        "command": "extension.commentConsoleLogsCurrent",
+        "title": "Comment console.log in Current File"
+      }
     ],
-    "activationEvents": [
-        "onCommand:extension.removeConsoleLogsAll",
-        "onCommand:extension.removeConsoleLogsCurrent",
-        "onCommand:extension.commentConsoleLogsAll",
-        "onCommand:extension.commentConsoleLogsCurrent"
-    ],
-    "main": "./out/extension.js",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.removeConsoleLogsAll",
-                "title": "Remove console.log from All Project Files"
-            },
-            {
-                "command": "extension.removeConsoleLogsCurrent",
-                "title": "Remove console.log from Current File"
-            },
-            {
-                "command": "extension.commentConsoleLogsAll",
-                "title": "Comment console.log in All Project Files"
-            },
-            {
-                "command": "extension.commentConsoleLogsCurrent",
-                "title": "Comment console.log in Current File"
-            }
-        ],
-        "configuration": {
-            "title": "Console Remover",
-            "properties": {
-                "consoleLogRemover.includedExtensions": {
-                    "type": "array",
-                    "default": [
-                        ".js",
-                        ".ts",
-                        ".jsx",
-                        ".tsx"
-                    ],
-                    "description": "File extensions to include for console operations"
-                },
-                "consoleLogRemover.excludedFolders": {
-                    "type": "array",
-                    "default": [
-                        "node_modules",
-                        "dist",
-                        "build",
-                        ".git"
-                    ],
-                    "description": "Folders to exclude from console operations"
-                },
-                "consoleLogRemover.excludedFiles": {
-                    "type": "array",
-                    "default": [
-                        "config.js",
-                        "config.json",
-                        "package.json",
-                        "package-lock.json"
-                    ],
-                    "description": "Files to exclude from console operations"
-                },
-                "consoleManager.removeLog": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Remove console.log statements when using 'Remove All Console Types'"
-                }
-            }
+    "configuration": {
+      "title": "Console Remover",
+      "properties": {
+        "consoleLogRemover.includedExtensions": {
+          "type": "array",
+          "default": [
+            ".js",
+            ".ts",
+            ".jsx",
+            ".tsx"
+          ],
+          "description": "File extensions to include for console operations"
+        },
+        "consoleLogRemover.excludedFolders": {
+          "type": "array",
+          "default": [
+            "node_modules",
+            "dist",
+            "build",
+            ".git"
+          ],
+          "description": "Folders to exclude from console operations"
+        },
+        "consoleLogRemover.excludedFiles": {
+          "type": "array",
+          "default": [
+            "config.js",
+            "config.json",
+            "package.json",
+            "package-lock.json"
+          ],
+          "description": "Files to exclude from console operations"
+        },
+        "consoleManager.removeLog": {
+          "type": "boolean",
+          "default": true,
+          "description": "Remove console.log statements when using 'Remove All Console Types'"
         }
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "pretest": "npm run compile && npm run lint",
-        "lint": "eslint src --ext ts",
-        "test": "node ./out/test/runTest.js"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.60.0",
-        "@types/node": "^14.14.37",
-        "@typescript-eslint/eslint-plugin": "^4.22.0",
-        "@typescript-eslint/parser": "^4.22.0",
-        "eslint": "^7.25.0",
-        "typescript": "^4.2.4"
+      }
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint . --config eslint.config.mjs",
+    "test": "node ./out/test/runTest.js",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.57.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^18.19.0",
+    "@types/vscode": "^1.93.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "prettier": "3.3.3",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.1.0"
+  }
 }

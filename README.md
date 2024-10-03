@@ -35,14 +35,14 @@ Access these commands through the Command Palette (Ctrl+Shift+P or Cmd+Shift+P o
 
 ```javascript
 function calculateTotal(items) {
-    console.log('Calculating total...');
-    let total = 0;
-    for (let item of items) {
-        console.log(`Processing item: ${item.name}`);
-        total += item.price;
-    }
-    console.log(`Total calculated: ${total}`);
-    return total;
+  console.log("Calculating total...");
+  let total = 0;
+  for (let item of items) {
+    console.log(`Processing item: ${item.name}`);
+    total += item.price;
+  }
+  console.log(`Total calculated: ${total}`);
+  return total;
 }
 ```
 
@@ -50,11 +50,11 @@ function calculateTotal(items) {
 
 ```javascript
 function calculateTotal(items) {
-    let total = 0;
-    for (let item of items) {
-        total += item.price;
-    }
-    return total;
+  let total = 0;
+  for (let item of items) {
+    total += item.price;
+  }
+  return total;
 }
 ```
 
@@ -62,14 +62,14 @@ function calculateTotal(items) {
 
 ```javascript
 function calculateTotal(items) {
-    // console.log('Calculating total...');
-    let total = 0;
-    for (let item of items) {
-        // console.log(`Processing item: ${item.name}`);
-        total += item.price;
-    }
-    // console.log(`Total calculated: ${total}`);
-    return total;
+  // console.log('Calculating total...');
+  let total = 0;
+  for (let item of items) {
+    // console.log(`Processing item: ${item.name}`);
+    total += item.price;
+  }
+  // console.log(`Total calculated: ${total}`);
+  return total;
 }
 ```
 
@@ -97,13 +97,13 @@ my-project/
 **src/main.js**
 
 ```javascript
-import { helper } from './utils';
+import { helper } from "./utils";
 
 function main() {
-    console.log('Application starting...');
-    const result = helper(5);
-    console.log('Result:', result);
-    return result;
+  console.log("Application starting...");
+  const result = helper(5);
+  console.log("Result:", result);
+  return result;
 }
 ```
 
@@ -111,8 +111,8 @@ function main() {
 
 ```javascript
 export function helper(x) {
-    console.log('Helper function called with:', x);
-    return x * 2;
+  console.log("Helper function called with:", x);
+  return x * 2;
 }
 ```
 
@@ -120,8 +120,8 @@ export function helper(x) {
 
 ```javascript
 function Header() {
-    console.log('Rendering header');
-    return '<header>Welcome</header>';
+  console.log("Rendering header");
+  return "<header>Welcome</header>";
 }
 ```
 
@@ -129,10 +129,10 @@ function Header() {
 
 ```javascript
 function testHelper() {
-    console.log('Running tests...');
-    const result = helper(3);
-    console.log('Test result:', result);
-    assert(result === 6);
+  console.log("Running tests...");
+  const result = helper(3);
+  console.log("Test result:", result);
+  assert(result === 6);
 }
 ```
 
@@ -141,11 +141,11 @@ function testHelper() {
 **src/main.js**
 
 ```javascript
-import { helper } from './utils';
+import { helper } from "./utils";
 
 function main() {
-    const result = helper(5);
-    return result;
+  const result = helper(5);
+  return result;
 }
 ```
 
@@ -153,7 +153,7 @@ function main() {
 
 ```javascript
 export function helper(x) {
-    return x * 2;
+  return x * 2;
 }
 ```
 
@@ -161,7 +161,7 @@ export function helper(x) {
 
 ```javascript
 function Header() {
-    return '<header>Welcome</header>';
+  return "<header>Welcome</header>";
 }
 ```
 
@@ -169,8 +169,8 @@ function Header() {
 
 ```javascript
 function testHelper() {
-    const result = helper(3);
-    assert(result === 6);
+  const result = helper(3);
+  assert(result === 6);
 }
 ```
 
@@ -199,8 +199,18 @@ Customize the extension's behavior through VS Code settings:
 ```json
 {
   "consoleLogRemover.includedExtensions": [".js", ".ts", ".jsx", ".tsx"],
-  "consoleLogRemover.excludedFolders": ["node_modules", "dist", "build", ".git"],
-  "consoleLogRemover.excludedFiles": ["config.js", "config.json", "package.json", "package-lock.json"]
+  "consoleLogRemover.excludedFolders": [
+    "node_modules",
+    "dist",
+    "build",
+    ".git"
+  ],
+  "consoleLogRemover.excludedFiles": [
+    "config.js",
+    "config.json",
+    "package.json",
+    "package-lock.json"
+  ]
 }
 ```
 
