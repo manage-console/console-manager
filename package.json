@@ -2,7 +2,7 @@
     "name": "console-manager",
     "displayName": "Console Manager 🧹✨",
     "description": "Remove console.log statements from current file or whole project, comment all console.log statements in current file or whole project with a single command.",
-    "version": "0.0.2",
+  "version": "1.0.0",
     "icon": "images/icon.png",
     "publisher": "Mohamed Nabih",
     "author": "Mohamed Nabih",
