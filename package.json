@@ -1,5 +1,5 @@
 {
-  "name": "clg-manger",
+  "name": "clg-manager",
   "displayName": "Console Manager 🧹✨",
   "description": "Remove console.log statements from current file or whole project, comment all console.log statements in current file or whole project with a single command.",
   "version": "1.0.1",
@@ -9,7 +9,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muhammad-nabih/console-manager"
+    "url": "https://github.com/manage-console/console-manager"
   },
   "engines": {
     "vscode": "^1.93.0",
@@ -80,7 +80,7 @@
         "consoleManager.removeLog": {
           "type": "boolean",
           "default": true,
-          "description": "Remove console.log statements when using 'Remove All Console Types'"
+          "description": "Enable/Disable the extension methods to remove or comment all console log statements in current file or all files in the project"
         }
       }
     }
@@ -92,7 +92,8 @@
     "pretest": "npm run compile",
     "lint": "eslint . --config eslint.config.mjs",
     "test": "node ./out/test/runTest.js",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^8.57.0",
@@ -102,8 +103,16 @@
     "@vscode/test-cli": "^0.0.4",
     "@vscode/test-electron": "^2.3.9",
     "eslint": "^8.57.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^14.0.0",
     "prettier": "3.3.3",
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{json,md,css}": "prettier --write"
   }
 }

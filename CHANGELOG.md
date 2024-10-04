@@ -16,7 +16,7 @@ All notable changes to the "Console Manager" extension will be documented in thi
 
 ## [1.0.0] - 2024-10-03
 
-- Initial release
+- Initial release.
 - Introduced core functionality for managing `console.log` statements in JavaScript and TypeScript files.
 - Added options to:
   - Remove `console.log` statements from the current file or all project files.

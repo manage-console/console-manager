@@ -29,11 +29,15 @@ Access these commands through the Command Palette (Ctrl+Shift+P or Cmd+Shift+P o
 3. `Comment console.log in Current File`
 4. `Comment console.log in All Project Files`
 
+### Command Line Usage
+
+In addition to the Visual Studio Code interface, you can also use the Console Manager through the command line. For more information, visit the ✨[manage-console-cli repository](https://github.com/manage-console/manage-console-cli).✨
+
 ### Examples
 
 #### Before using Console Manager
 
-```javascript
+````javascript
 function calculateTotal(items) {
   console.log("Calculating total...");
   let total = 0;
@@ -44,7 +48,7 @@ function calculateTotal(items) {
   console.log(`Total calculated: ${total}`);
   return total;
 }
-```
+
 
 #### After using "Remove console.log from Current File"
 
@@ -56,7 +60,7 @@ function calculateTotal(items) {
   }
   return total;
 }
-```
+````
 
 #### After using "Comment console.log in Current File"
 
@@ -235,7 +239,7 @@ This extension is licensed under the MIT License.
 
 ## Support 💬
 
-If you encounter any issues or have suggestions, please [open an issue](https://github.com/muhammad-nabih/console-manager/issues) on our GitHub repository.
+If you encounter any issues or have suggestions, please [open an issue](https://github.com/manage-console/console-manager/issues) on our GitHub repository.
 
 ---
 
