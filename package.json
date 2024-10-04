@@ -1,8 +1,8 @@
 {
-  "name": "clg-manager",
+  "name": "clg-manger",
   "displayName": "Console Manager 🧹✨",
   "description": "Remove console.log statements from current file or whole project, comment all console.log statements in current file or whole project with a single command.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "images/icon.png",
   "publisher": "ConsoleManager",
   "author": "Mohamed Nabih",
